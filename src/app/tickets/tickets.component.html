@@ -1,0 +1,29 @@
+<div>
+    <h1 className = "text-center"> Tickets List</h1>
+    <table *ngIf="tickets?.length > 0" class="table table-striped">
+        <thead>
+            <th> Id </th>
+            <th> Assignee Id </th>
+            <th> Priority </th>
+            <th> Status </th>
+            <th> Subject </th>
+            <th> Type </th>
+            <th> Description </th>
+        </thead>
+        <tbody>
+            <tr *ngFor="let ticket of tickets">
+                <td> {{ticket.id}} </td>
+                <td> {{ticket.assigneeId}} </td>
+                <td> {{ticket.priority}} </td>   
+                <td> {{ticket.status}} </td>
+                <td> {{ticket.subject}} </td>
+                <td> {{ticket.type}} </td>
+                <td> {{ticket.description}} </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div *ngIf="tickets?.length == 0">
+        <p> API unavailable or no tickets at this time; Try after sometime. </p>
+    </div>
+</div>
