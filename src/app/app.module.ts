@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { TicketsService } from './tickets.service';
 import { TicketsComponent } from './tickets/tickets.component';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +16,8 @@ import {MatPaginatorModule} from '@angular/material/paginator';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule
   ],
   providers: [TicketsService],
   bootstrap: [AppComponent]
